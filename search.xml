@@ -16,10 +16,10 @@
 </ul>
 <h2 id="1-1-开发环境"><a href="#1-1-开发环境" class="headerlink" title="1.1.开发环境"></a>1.1.开发环境</h2><ul>
 <li>Windows 10</li>
-<li><a href="mailto:&#x4e;&#111;&#x64;&#x65;&#46;&#x6a;&#x73;&#x40;&#x31;&#x32;&#x2e;&#x31;&#x34;&#46;&#48;">&#x4e;&#111;&#x64;&#x65;&#46;&#x6a;&#x73;&#x40;&#x31;&#x32;&#x2e;&#x31;&#x34;&#46;&#48;</a></li>
-<li><a href="mailto:&#x47;&#105;&#x74;&#64;&#x32;&#46;&#x33;&#50;&#x2e;&#x30;">&#x47;&#105;&#x74;&#64;&#x32;&#46;&#x33;&#50;&#x2e;&#x30;</a></li>
-<li><a href="mailto:&#72;&#101;&#120;&#x6f;&#x2d;&#x63;&#108;&#x69;&#64;&#52;&#46;&#51;&#46;&#48;">&#72;&#101;&#120;&#x6f;&#x2d;&#x63;&#108;&#x69;&#64;&#52;&#46;&#51;&#46;&#48;</a></li>
-<li><a href="mailto:&#78;&#x65;&#x78;&#116;&#64;&#53;&#46;&#49;&#46;&#52;">&#78;&#x65;&#x78;&#116;&#64;&#53;&#46;&#49;&#46;&#52;</a></li>
+<li><a href="mailto:&#x4e;&#x6f;&#x64;&#x65;&#x2e;&#x6a;&#x73;&#64;&#49;&#50;&#46;&#49;&#52;&#46;&#x30;">&#x4e;&#x6f;&#x64;&#x65;&#x2e;&#x6a;&#x73;&#64;&#49;&#50;&#46;&#49;&#52;&#46;&#x30;</a></li>
+<li><a href="mailto:&#71;&#x69;&#x74;&#64;&#x32;&#x2e;&#x33;&#50;&#46;&#48;">&#71;&#x69;&#x74;&#64;&#x32;&#x2e;&#x33;&#50;&#46;&#48;</a></li>
+<li><a href="mailto:&#72;&#101;&#120;&#111;&#45;&#x63;&#108;&#105;&#x40;&#52;&#x2e;&#x33;&#46;&#48;">&#72;&#101;&#120;&#111;&#45;&#x63;&#108;&#105;&#x40;&#52;&#x2e;&#x33;&#46;&#48;</a></li>
+<li><a href="mailto:&#x4e;&#x65;&#120;&#x74;&#x40;&#53;&#x2e;&#49;&#46;&#52;">&#x4e;&#x65;&#120;&#x74;&#x40;&#53;&#x2e;&#49;&#46;&#52;</a></li>
 </ul>
 <h1 id="2-搭建Github博客"><a href="#2-搭建Github博客" class="headerlink" title="2.搭建Github博客"></a>2.搭建Github博客</h1><h2 id="2-1-安装Node-js"><a href="#2-1-安装Node-js" class="headerlink" title="2.1.安装Node.js"></a>2.1.安装Node.js</h2><p>官网<a href="https://nodejs.org/zh-cn/download/releases/">点击下载</a></p>
 <p>找到<strong>Node.js 12.14.0</strong>，点击这里我们是64位电脑点击<strong>node-v12.14.0-x64.msi</strong>下载即可，点击进行安装，安装过程如图所示：</p>
@@ -86,7 +86,7 @@
 
 <p>修改<strong>站点配置文件</strong>，我这里是/errof.com/_config.yml，在最后找到deploy选项，修改成：</p>
 <blockquote>
-<p>deploy:<br>  type: git<br>  repo:<br>         github: <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a>:jdzy/jdzy.github.io.git</p>
+<p>deploy:<br>  type: git<br>  repo:<br>         github: <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;</a>:jdzy/jdzy.github.io.git</p>
 </blockquote>
 <p><strong>jdzy/jdzy.github.io.git</strong>的<strong>jdzy</strong>改成自己的用户名即可</p>
 <p>最后进入<strong>errof.com文件夹</strong>[你的站点目录下]，打开Git Bash，依次输入：</p>
@@ -94,7 +94,7 @@
 
 
 
-<h1 id="3-最后"><a href="#3-最后" class="headerlink" title="3.最后"></a>3.最后</h1><p>此时你的<strong>Hexo博客</strong>已经部署到<strong>Github</strong>上了，Github已经提供域名，浏览器搜索[用户名].github.io就可以进入网站啦，下一篇介绍博客使用、安装<strong>Next主题</strong>以及<strong>Next主题</strong>的优化配置</p>
+<h1 id="3-最后"><a href="#3-最后" class="headerlink" title="3.最后"></a>3.最后</h1><p>此时你的<strong>Hexo博客</strong>已经部署到<strong>Github</strong>上了，Github已经提供域名，浏览器搜索[用户名].github.io就可以进入网站啦，博客使用、安装<strong>Next主题</strong>以及<strong>Next主题</strong>的优化配置有兴趣的可以留言解决</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello World !\n \</span></span><br><span class="line"><span class="string">       绝对战有(jdzy) \n&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 ]]></content>
@@ -105,33 +105,5 @@
         <tag>Hexo</tag>
         <tag>Github</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>测试目录</title>
-    <url>/2021/10/16/%E6%B5%8B%E8%AF%95%E7%9B%AE%E5%BD%95/</url>
-    <content><![CDATA[<p>啊实打实的发</p>
-<h2 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h2><h3 id="二级"><a href="#二级" class="headerlink" title="二级"></a>二级</h3><p>gsdgrsdfdfgs</p>
-<h3 id="fsd"><a href="#fsd" class="headerlink" title="fsd"></a>fsd</h3><p>的鬼斧神工的方式</p>
-<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="fsdafds"><a href="#fsdafds" class="headerlink" title="fsdafds"></a>fsdafds</h3><p>如果有很多丰田的投入得分回复他获得过</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>大使馆史蒂夫噶噶士大夫</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/10/14/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
