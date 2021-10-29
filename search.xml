@@ -7,6 +7,8 @@
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>行内元素也可以使用Flex布局</p>
+<span id="more"></span>
+
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Webkit内核的浏览器，必须加上-webkit前缀</p>
@@ -153,14 +155,14 @@
 <li><p>Github免费提供二级域名</p>
 </li>
 <li><p>可轻松打包转发到第三平台，本站采用Vercel关联Github仓库进行托管，国内访问速度也很快</p>
-</li>
+<span id="more"></span></li>
 </ul>
 <h2 id="1-1-开发环境"><a href="#1-1-开发环境" class="headerlink" title="1.1.开发环境"></a>1.1.开发环境</h2><ul>
 <li>Windows 10</li>
-<li><a href="mailto:&#78;&#111;&#100;&#x65;&#x2e;&#x6a;&#x73;&#x40;&#49;&#x32;&#x2e;&#49;&#x34;&#46;&#x30;">&#78;&#111;&#100;&#x65;&#x2e;&#x6a;&#x73;&#x40;&#49;&#x32;&#x2e;&#49;&#x34;&#46;&#x30;</a></li>
-<li><a href="mailto:&#x47;&#x69;&#x74;&#x40;&#50;&#x2e;&#51;&#x32;&#x2e;&#48;">&#x47;&#x69;&#x74;&#x40;&#50;&#x2e;&#51;&#x32;&#x2e;&#48;</a></li>
-<li><a href="mailto:&#72;&#101;&#120;&#111;&#45;&#x63;&#108;&#x69;&#64;&#x34;&#x2e;&#51;&#x2e;&#x30;">&#72;&#101;&#120;&#111;&#45;&#x63;&#108;&#x69;&#64;&#x34;&#x2e;&#51;&#x2e;&#x30;</a></li>
-<li><a href="mailto:&#78;&#x65;&#x78;&#x74;&#x40;&#x35;&#46;&#49;&#x2e;&#x34;">&#78;&#x65;&#x78;&#x74;&#x40;&#x35;&#46;&#49;&#x2e;&#x34;</a></li>
+<li><a href="mailto:&#x4e;&#x6f;&#100;&#101;&#x2e;&#x6a;&#115;&#x40;&#x31;&#x32;&#46;&#49;&#x34;&#x2e;&#48;">&#x4e;&#x6f;&#100;&#101;&#x2e;&#x6a;&#115;&#x40;&#x31;&#x32;&#46;&#49;&#x34;&#x2e;&#48;</a></li>
+<li><a href="mailto:&#71;&#x69;&#116;&#64;&#x32;&#x2e;&#x33;&#x32;&#46;&#48;">&#71;&#x69;&#116;&#64;&#x32;&#x2e;&#x33;&#x32;&#46;&#48;</a></li>
+<li><a href="mailto:&#72;&#x65;&#120;&#111;&#45;&#x63;&#x6c;&#105;&#64;&#52;&#46;&#51;&#46;&#x30;">&#72;&#x65;&#120;&#111;&#45;&#x63;&#x6c;&#105;&#64;&#52;&#46;&#51;&#46;&#x30;</a></li>
+<li><a href="mailto:&#x4e;&#101;&#x78;&#116;&#x40;&#53;&#x2e;&#x31;&#46;&#x34;">&#x4e;&#101;&#x78;&#116;&#x40;&#53;&#x2e;&#x31;&#46;&#x34;</a></li>
 </ul>
 <h1 id="2-搭建Github博客"><a href="#2-搭建Github博客" class="headerlink" title="2.搭建Github博客"></a>2.搭建Github博客</h1><h2 id="2-1-安装Node-js"><a href="#2-1-安装Node-js" class="headerlink" title="2.1.安装Node.js"></a>2.1.安装Node.js</h2><p>官网<a href="https://nodejs.org/zh-cn/download/releases/">点击下载</a></p>
 <p>找到<strong>Node.js 12.14.0</strong>，点击这里我们是64位电脑点击<strong>node-v12.14.0-x64.msi</strong>下载即可，点击进行安装，安装过程如图所示：</p>
@@ -227,7 +229,7 @@
 
 <p>修改<strong>站点配置文件</strong>，我这里是/errof.com/_config.yml，在最后找到deploy选项，修改成：</p>
 <blockquote>
-<p>deploy:<br>  type: git<br>  repo:<br>         github: <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;</a>:jdzy/jdzy.github.io.git</p>
+<p>deploy:<br>  type: git<br>  repo:<br>         github: <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;</a>:jdzy/jdzy.github.io.git</p>
 </blockquote>
 <p><strong>jdzy/jdzy.github.io.git</strong>的<strong>jdzy</strong>改成自己的用户名即可</p>
 <p>最后进入<strong>errof.com文件夹</strong>[你的站点目录下]，打开Git Bash，依次输入：</p>
@@ -252,6 +254,8 @@
     <url>/2021/10/28/Spring%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E5%8F%8A%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h2 id="一、创建AccountDao接口"><a href="#一、创建AccountDao接口" class="headerlink" title="一、创建AccountDao接口"></a>一、创建AccountDao接口</h2><p>先创建接口，实现增加、更新、删除、查询以及事务管理中模拟交易的方法：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> springjdbc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">AccountDao</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addAccount</span><span class="params">(Account account)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">updateAccount</span><span class="params">(Account account)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteAccount</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Account <span class="title">findAccountById</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Account&gt;  <span class="title">findAllAcount</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">transfer</span><span class="params">(String outUser,String inUser,Double money)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <h2 id="二、创建Account类"><a href="#二、创建Account类" class="headerlink" title="二、创建Account类"></a>二、创建Account类</h2><p>创建Account类，账户类实现setter/getter方法</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> springjdbc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Account</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> Double balance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getUsername</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> username;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUsername</span><span class="params">(String username)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.username=username;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  Double <span class="title">getBalance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> balance;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBalance</span><span class="params">(Double balance)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.balance=balance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Account [id=&quot;</span> + id +<span class="string">&quot;,&quot;</span> + <span class="string">&quot;username=&quot;</span> + username + <span class="string">&quot;, balance=&quot;</span> + balance + <span class="string">&quot;]&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
