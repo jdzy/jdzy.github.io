@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo + Github免费搭建个人博客</title>
+    <url>/2021/10/15/Hexo-Github%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>使用Github page服务搭建博客的好处有：</p>
+<ul>
+<li><p>全是静态文件访问速度快</p>
+</li>
+<li><p>免费，不用花一分钱</p>
+</li>
+<li><p>Github免费提供二级域名</p>
+</li>
+<li><p>可轻松打包转发到第三平台，本站采用Vercel关联Github仓库进行托管，国内访问速度也很快</p>
+<span id="more"></span></li>
+</ul>
+<h2 id="1-1-开发环境"><a href="#1-1-开发环境" class="headerlink" title="1.1.开发环境"></a>1.1.开发环境</h2><ul>
+<li>Windows 10</li>
+<li><a href="mailto:&#x4e;&#111;&#100;&#101;&#46;&#x6a;&#115;&#64;&#x31;&#x32;&#x2e;&#49;&#52;&#46;&#x30;">&#x4e;&#111;&#100;&#101;&#46;&#x6a;&#115;&#64;&#x31;&#x32;&#x2e;&#49;&#52;&#46;&#x30;</a></li>
+<li><a href="mailto:&#71;&#x69;&#x74;&#64;&#x32;&#x2e;&#x33;&#x32;&#x2e;&#48;">&#71;&#x69;&#x74;&#64;&#x32;&#x2e;&#x33;&#x32;&#x2e;&#48;</a></li>
+<li><a href="mailto:&#x48;&#x65;&#x78;&#x6f;&#x2d;&#x63;&#108;&#105;&#x40;&#52;&#x2e;&#51;&#46;&#48;">&#x48;&#x65;&#x78;&#x6f;&#x2d;&#x63;&#108;&#105;&#x40;&#52;&#x2e;&#51;&#46;&#48;</a></li>
+<li><a href="mailto:&#78;&#x65;&#x78;&#116;&#x40;&#53;&#46;&#49;&#x2e;&#x34;">&#78;&#x65;&#x78;&#116;&#x40;&#53;&#46;&#49;&#x2e;&#x34;</a></li>
+</ul>
+<h1 id="2-搭建Github博客"><a href="#2-搭建Github博客" class="headerlink" title="2.搭建Github博客"></a>2.搭建Github博客</h1><h2 id="2-1-安装Node-js"><a href="#2-1-安装Node-js" class="headerlink" title="2.1.安装Node.js"></a>2.1.安装Node.js</h2><p>官网<a href="https://nodejs.org/zh-cn/download/releases/">点击下载</a></p>
+<p>找到<strong>Node.js 12.14.0</strong>，点击这里我们是64位电脑点击<strong>node-v12.14.0-x64.msi</strong>下载即可，点击进行安装，安装过程如图所示：</p>
+<p><img src="/postimg/1/1.png" alt="1"></p>
+<p><img src="/postimg/1/2.png" alt="1"></p>
+<p><img src="/postimg/1/3.png" alt="1"></p>
+<p><img src="/postimg/1/4.png" alt="1"></p>
+<p><img src="/postimg/1/5.png" alt="1"></p>
+<p><img src="/postimg/1/6.png" alt="1"></p>
+<p>安装程序会自动配置环境变量以及npm，打开cmd分别输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v12.14.0</span><br><span class="line">$ npm -v</span><br><span class="line">6.13.4</span><br></pre></td></tr></table></figure>
+
+<p>若如图所示，恭喜你，Node.js安装成功！</p>
+<h2 id="2-2-安装Git"><a href="#2-2-安装Git" class="headerlink" title="2.2.安装Git"></a>2.2.安装Git</h2><p>官网<a href="https://git-scm.com/download/">点击下载</a></p>
+<p>找到相应版本下载到电脑再安装，这里不细说<a href="https://blog.csdn.net/qq_32786873/article/details/80570783">教程</a></p>
+<p>打开cmd输入git –version，显示对应版本则安装成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\suche&gt;git --version</span><br><span class="line">git version 2.32.0.windows.2</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-建立Hexo站点"><a href="#2-3-建立Hexo站点" class="headerlink" title="2.3.建立Hexo站点"></a>2.3.建立Hexo站点</h2><h3 id="2-3-1-安装Hexo"><a href="#2-3-1-安装Hexo" class="headerlink" title="2.3.1.安装Hexo"></a>2.3.1.安装Hexo</h3><p>桌面右键Git Bash Here进入Git Bash,输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-2-建站"><a href="#2-3-2-建站" class="headerlink" title="2.3.2.建站"></a>2.3.2.建站</h3><p>安装Hexo 完成后，我们可以进行建立站点了，这里我在桌面打开Bash执行以下命令进行初始化：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init errof.com</span><br></pre></td></tr></table></figure>
+
+<p>然后进入生成的文件夹，初始化时errof.com可替换成任意名称</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> errof.com</span><br></pre></td></tr></table></figure>
+
+<p>再安装依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<p>再生成网页静态文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<p>这时候网站已经完成了，我们可以输入以下命令启动本地服务器进行测试：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>这时候打开浏览器输入<strong>localhost:4000</strong>，出现以下界面则Hexo站点成功运行</p>
+<p><img src="/postimg/1/8.png" alt="success"></p>
+<h2 id="2-4-部署到Github"><a href="#2-4-部署到Github" class="headerlink" title="2.4.部署到Github"></a>2.4.部署到Github</h2><h3 id="2-4-1-注册-登录Github账号"><a href="#2-4-1-注册-登录Github账号" class="headerlink" title="2.4.1.注册/登录Github账号"></a>2.4.1.注册/登录Github账号</h3><p><a href="https://github.com/">注册、登录</a>Github，有账号右上角Sign in即可，没有Sign up一个即可，想必大家这都不是问题不必细说</p>
+<p>注：Github访问慢进不去这里推荐Gitee开源的很好用的工具<a href="https://gitee.com/docmirror/dev-sidecar/releases">直通车</a></p>
+<h3 id="2-4-2-配置SSH-key"><a href="#2-4-2-配置SSH-key" class="headerlink" title="2.4.2.配置SSH key"></a>2.4.2.配置SSH key</h3><p>先进入ssh文件夹：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
+
+<p>再输入命令生成密钥：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;你的邮箱地址&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后一直回车即可，最后会在用户目录下生成密钥，windows文件夹在<strong>C:\Users\suche</strong>下的**.ssh<strong>目录下，用记事本打开</strong>id_rsa.pub**，全选复制，然后打开Github主页，点头像进入Settings -&gt; SSH and GPGkeys -&gt; New SSH key ， title随便填即可，把刚才复制的粘贴在Key下，最后点Add SSH Key，大功告成</p>
+<p>下面进入Bash输入命令来测试是否配置成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi jdzy! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果提示Are you sure you want to continue connecting (yes/no)?</p>
+<p>输入yes回车即可</p>
+</blockquote>
+<p>最后出现上面内容，那SSH已成功配置！</p>
+<p>最后再配置即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;你的github用户名&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;你的github邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-3-建立Github-Page"><a href="#2-4-3-建立Github-Page" class="headerlink" title="2.4.3.建立Github Page"></a>2.4.3.建立Github Page</h3><p>个人主页点击<strong>New repository</strong>，创立仓库</p>
+<p><img src="/postimg/1/9.png" alt="repo"></p>
+<p>Repository name输入[你的用户名].<strong>github.io</strong>即可,Description是仓库描述随意填写就行，其他默认，点击Create repository创建仓库，然后就可以部署了</p>
+<h3 id="2-4-4-一键部署"><a href="#2-4-4-一键部署" class="headerlink" title="2.4.4.一键部署"></a>2.4.4.一键部署</h3><p>先安装<strong>hexo-deployer-git</strong>，打开Bash输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>修改<strong>站点配置文件</strong>，我这里是/errof.com/_config.yml，在最后找到deploy选项，修改成：</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repo:<br>         github: <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jdzy/jdzy.github.io.git</p>
+</blockquote>
+<p><strong>jdzy/jdzy.github.io.git</strong>的<strong>jdzy</strong>改成自己的用户名即可</p>
+<p>最后进入<strong>errof.com文件夹</strong>[你的站点目录下]，打开Git Bash，依次输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean      <span class="comment">#清除缓存，每次部署建议运行一次</span></span><br><span class="line">$ hexo g          <span class="comment">#生成静态网页文件</span></span><br><span class="line">$ hexo d          <span class="comment">#部署网站</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="3-最后"><a href="#3-最后" class="headerlink" title="3.最后"></a>3.最后</h1><p>此时你的<strong>Hexo博客</strong>已经部署到<strong>Github</strong>上了，Github已经提供域名，浏览器搜索[用户名].github.io就可以进入网站啦，博客使用、安装<strong>Next主题</strong>以及<strong>Next主题</strong>的优化配置有兴趣的可以留言解决</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello World !\n \</span></span><br><span class="line"><span class="string">       绝对战有(jdzy) \n&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS中flex布局详解</title>
     <url>/2021/10/28/CSS%E4%B8%ADflex%E5%B8%83%E5%B1%80%E8%AF%A6%E8%A7%A3/</url>
     <content><![CDATA[<h2 id="一、Flex布局是啥？"><a href="#一、Flex布局是啥？" class="headerlink" title="一、Flex布局是啥？"></a>一、Flex布局是啥？</h2><p>Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为Flex布局。</p>
@@ -141,112 +247,6 @@
       <tags>
         <tag>CSS</tag>
         <tag>flex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo + Github免费搭建个人博客</title>
-    <url>/2021/10/15/Hexo-Github%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>使用Github page服务搭建博客的好处有：</p>
-<ul>
-<li><p>全是静态文件访问速度快</p>
-</li>
-<li><p>免费，不用花一分钱</p>
-</li>
-<li><p>Github免费提供二级域名</p>
-</li>
-<li><p>可轻松打包转发到第三平台，本站采用Vercel关联Github仓库进行托管，国内访问速度也很快</p>
-<span id="more"></span></li>
-</ul>
-<h2 id="1-1-开发环境"><a href="#1-1-开发环境" class="headerlink" title="1.1.开发环境"></a>1.1.开发环境</h2><ul>
-<li>Windows 10</li>
-<li><a href="mailto:&#78;&#x6f;&#100;&#x65;&#x2e;&#x6a;&#115;&#64;&#x31;&#x32;&#x2e;&#x31;&#x34;&#46;&#x30;">&#78;&#x6f;&#100;&#x65;&#x2e;&#x6a;&#115;&#64;&#x31;&#x32;&#x2e;&#x31;&#x34;&#46;&#x30;</a></li>
-<li><a href="mailto:&#x47;&#105;&#116;&#64;&#x32;&#46;&#x33;&#50;&#46;&#48;">&#x47;&#105;&#116;&#64;&#x32;&#46;&#x33;&#50;&#46;&#48;</a></li>
-<li><a href="mailto:&#72;&#101;&#120;&#111;&#x2d;&#x63;&#108;&#x69;&#x40;&#x34;&#x2e;&#x33;&#46;&#x30;">&#72;&#101;&#120;&#111;&#x2d;&#x63;&#108;&#x69;&#x40;&#x34;&#x2e;&#x33;&#46;&#x30;</a></li>
-<li><a href="mailto:&#x4e;&#x65;&#x78;&#116;&#64;&#x35;&#x2e;&#49;&#x2e;&#52;">&#x4e;&#x65;&#x78;&#116;&#64;&#x35;&#x2e;&#49;&#x2e;&#52;</a></li>
-</ul>
-<h1 id="2-搭建Github博客"><a href="#2-搭建Github博客" class="headerlink" title="2.搭建Github博客"></a>2.搭建Github博客</h1><h2 id="2-1-安装Node-js"><a href="#2-1-安装Node-js" class="headerlink" title="2.1.安装Node.js"></a>2.1.安装Node.js</h2><p>官网<a href="https://nodejs.org/zh-cn/download/releases/">点击下载</a></p>
-<p>找到<strong>Node.js 12.14.0</strong>，点击这里我们是64位电脑点击<strong>node-v12.14.0-x64.msi</strong>下载即可，点击进行安装，安装过程如图所示：</p>
-<p><img src="/postimg/1/1.png" alt="1"></p>
-<p><img src="/postimg/1/2.png" alt="1"></p>
-<p><img src="/postimg/1/3.png" alt="1"></p>
-<p><img src="/postimg/1/4.png" alt="1"></p>
-<p><img src="/postimg/1/5.png" alt="1"></p>
-<p><img src="/postimg/1/6.png" alt="1"></p>
-<p>安装程序会自动配置环境变量以及npm，打开cmd分别输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v12.14.0</span><br><span class="line">$ npm -v</span><br><span class="line">6.13.4</span><br></pre></td></tr></table></figure>
-
-<p>若如图所示，恭喜你，Node.js安装成功！</p>
-<h2 id="2-2-安装Git"><a href="#2-2-安装Git" class="headerlink" title="2.2.安装Git"></a>2.2.安装Git</h2><p>官网<a href="https://git-scm.com/download/">点击下载</a></p>
-<p>找到相应版本下载到电脑再安装，这里不细说<a href="https://blog.csdn.net/qq_32786873/article/details/80570783">教程</a></p>
-<p>打开cmd输入git –version，显示对应版本则安装成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\suche&gt;git --version</span><br><span class="line">git version 2.32.0.windows.2</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-3-建立Hexo站点"><a href="#2-3-建立Hexo站点" class="headerlink" title="2.3.建立Hexo站点"></a>2.3.建立Hexo站点</h2><h3 id="2-3-1-安装Hexo"><a href="#2-3-1-安装Hexo" class="headerlink" title="2.3.1.安装Hexo"></a>2.3.1.安装Hexo</h3><p>桌面右键Git Bash Here进入Git Bash,输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3-2-建站"><a href="#2-3-2-建站" class="headerlink" title="2.3.2.建站"></a>2.3.2.建站</h3><p>安装Hexo 完成后，我们可以进行建立站点了，这里我在桌面打开Bash执行以下命令进行初始化：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init errof.com</span><br></pre></td></tr></table></figure>
-
-<p>然后进入生成的文件夹，初始化时errof.com可替换成任意名称</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> errof.com</span><br></pre></td></tr></table></figure>
-
-<p>再安装依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<p>再生成网页静态文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-
-<p>这时候网站已经完成了，我们可以输入以下命令启动本地服务器进行测试：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p>这时候打开浏览器输入<strong>localhost:4000</strong>，出现以下界面则Hexo站点成功运行</p>
-<p><img src="/postimg/1/8.png" alt="success"></p>
-<h2 id="2-4-部署到Github"><a href="#2-4-部署到Github" class="headerlink" title="2.4.部署到Github"></a>2.4.部署到Github</h2><h3 id="2-4-1-注册-登录Github账号"><a href="#2-4-1-注册-登录Github账号" class="headerlink" title="2.4.1.注册/登录Github账号"></a>2.4.1.注册/登录Github账号</h3><p><a href="https://github.com/">注册、登录</a>Github，有账号右上角Sign in即可，没有Sign up一个即可，想必大家这都不是问题不必细说</p>
-<p>注：Github访问慢进不去这里推荐Gitee开源的很好用的工具<a href="https://gitee.com/docmirror/dev-sidecar/releases">直通车</a></p>
-<h3 id="2-4-2-配置SSH-key"><a href="#2-4-2-配置SSH-key" class="headerlink" title="2.4.2.配置SSH key"></a>2.4.2.配置SSH key</h3><p>先进入ssh文件夹：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
-
-<p>再输入命令生成密钥：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;你的邮箱地址&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>然后一直回车即可，最后会在用户目录下生成密钥，windows文件夹在<strong>C:\Users\suche</strong>下的**.ssh<strong>目录下，用记事本打开</strong>id_rsa.pub**，全选复制，然后打开Github主页，点头像进入Settings -&gt; SSH and GPGkeys -&gt; New SSH key ， title随便填即可，把刚才复制的粘贴在Key下，最后点Add SSH Key，大功告成</p>
-<p>下面进入Bash输入命令来测试是否配置成功：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi jdzy! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果提示Are you sure you want to continue connecting (yes/no)?</p>
-<p>输入yes回车即可</p>
-</blockquote>
-<p>最后出现上面内容，那SSH已成功配置！</p>
-<p>最后再配置即可：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;你的github用户名&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;你的github邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-4-3-建立Github-Page"><a href="#2-4-3-建立Github-Page" class="headerlink" title="2.4.3.建立Github Page"></a>2.4.3.建立Github Page</h3><p>个人主页点击<strong>New repository</strong>，创立仓库</p>
-<p><img src="/postimg/1/9.png" alt="repo"></p>
-<p>Repository name输入[你的用户名].<strong>github.io</strong>即可,Description是仓库描述随意填写就行，其他默认，点击Create repository创建仓库，然后就可以部署了</p>
-<h3 id="2-4-4-一键部署"><a href="#2-4-4-一键部署" class="headerlink" title="2.4.4.一键部署"></a>2.4.4.一键部署</h3><p>先安装<strong>hexo-deployer-git</strong>，打开Bash输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>修改<strong>站点配置文件</strong>，我这里是/errof.com/_config.yml，在最后找到deploy选项，修改成：</p>
-<blockquote>
-<p>deploy:<br>  type: git<br>  repo:<br>         github: <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;</a>:jdzy/jdzy.github.io.git</p>
-</blockquote>
-<p><strong>jdzy/jdzy.github.io.git</strong>的<strong>jdzy</strong>改成自己的用户名即可</p>
-<p>最后进入<strong>errof.com文件夹</strong>[你的站点目录下]，打开Git Bash，依次输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean      <span class="comment">#清除缓存，每次部署建议运行一次</span></span><br><span class="line">$ hexo g          <span class="comment">#生成静态网页文件</span></span><br><span class="line">$ hexo d          <span class="comment">#部署网站</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="3-最后"><a href="#3-最后" class="headerlink" title="3.最后"></a>3.最后</h1><p>此时你的<strong>Hexo博客</strong>已经部署到<strong>Github</strong>上了，Github已经提供域名，浏览器搜索[用户名].github.io就可以进入网站啦，博客使用、安装<strong>Next主题</strong>以及<strong>Next主题</strong>的优化配置有兴趣的可以留言解决</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello World !\n \</span></span><br><span class="line"><span class="string">       绝对战有(jdzy) \n&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
